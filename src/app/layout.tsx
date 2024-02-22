@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Label } from "@/components/ui/label";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Separator } from "@/components/ui/separator";
+import { Input } from "@/components/ui/input";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,5 +22,37 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>{children}</body>
     </html>
+  );
+}
+
+export function SpreadsheetInput() {
+  return (
+    <div className="grid w-full max-w-sm items-center gap-1.5">
+      <Label htmlFor="spreadhseet">Excel Spreadsheet (.xlsx)</Label>
+      <Input id="spreadsheet" type="file" />
+    </div>
+  );
+}
+
+//FILE LIST
+const tags = Array.from({ length: 50 }).map(
+  (_, i, a) => `v1.2.0-beta.${a.length - i}`
+);
+
+export function ScrollAreaDemo() {
+  return (
+    <ScrollArea className="h-72 rounded-md border">
+      <div className="p-4">
+        <h4 className="mb-4 text-sm font-medium leading-none">Files</h4>
+        {tags.map((tag) => (
+          <>
+            <div key={tag} className="text-sm">
+              {tag}
+            </div>
+            <Separator className="my-2" />
+          </>
+        ))}
+      </div>
+    </ScrollArea>
   );
 }
