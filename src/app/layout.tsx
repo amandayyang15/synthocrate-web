@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Label } from "@/components/ui/label";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
 
@@ -41,7 +41,10 @@ const tags = Array.from({ length: 50 }).map(
 
 export function ScrollAreaDemo() {
   return (
-    <ScrollArea className="h-72 rounded-md border">
+    <ScrollArea
+      className="h-72 rounded-md border"
+      // style={{ maxHeight: "160px" }}
+    >
       <div className="p-4">
         <h4 className="mb-4 text-sm font-medium leading-none">Files</h4>
         {tags.map((tag) => (
@@ -53,6 +56,7 @@ export function ScrollAreaDemo() {
           </>
         ))}
       </div>
+      {/* <ScrollBar orientation="vertical" /> */}
     </ScrollArea>
   );
 }
