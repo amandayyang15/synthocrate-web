@@ -1,9 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Repo Structure
+- `src/app/page.tsx` - Contains the high level main application code
+- `src/app/layout.tsx` - Contains components used in `page.tsx`
+- `src/app/components` - Contains the [shadcn](https://ui.shadcn.com/) components
+- `data` - Contains backend [Pandas](https://pandas.pydata.org/) files
 
-## Getting Started
+## Set-Up
+1. Install Python (I am using Python 3.9.13).
+2. Create virtual environment `venv`:
+   ```bash
+    python -m venv .venv
+    ```
+3. Activate virtual environment:
+    ```bash
+    . venv/bin/activate
+    ```
+4. Set kernal to use `venv` (may need to install `ipykernel`)
 
-First, run the development server:
-
+## Running Server
 ```bash
 npm run dev
 # or
@@ -13,24 +26,4 @@ pnpm dev
 # or
 bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Open [http://localhost:3000](http://localhost:3000) to view server in browser.
