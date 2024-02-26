@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
-import data from "/home/ayyang/synthocrate-web/data/data.json";
+import data from "../../data/data.json";
 
 const inter = Inter({ subsets: ["latin"] });
 
